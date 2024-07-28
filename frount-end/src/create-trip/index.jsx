@@ -107,7 +107,7 @@ const CreateTrip = () => {
     console.log("hotelOption", hotelOption);
     console.log("days", days);
 
-    let result = await fetch("http://localhost:5000/tripdata", {
+    let result = await fetch("https://trip-planner-ai-back-end.vercel.app//tripdata", {
       method: "post",
       body: JSON.stringify({ docID, hotelOption, days, userEmail, formData }),
       headers: {

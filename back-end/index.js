@@ -65,4 +65,4 @@ app.get("/my-trip/:key", async (req, res) => {
   res.send(result);
 });
 
-app.listen(5000);
+app.listen("https://trip-planner-ai-back-end.vercel.app/"||5000);

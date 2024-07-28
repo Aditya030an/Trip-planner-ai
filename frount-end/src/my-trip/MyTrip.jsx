@@ -5,7 +5,7 @@ const MyTrip = () => {
   const [usertrip, setUserTrip] = useState([]);
   const email = JSON.parse(localStorage.getItem("user")).email;
   const prevTrip = async () => {
-    let result = await fetch(`http://localhost:5000/my-trip/${email}`);
+    let result = await fetch(`https://trip-planner-ai-back-end.vercel.app/my-trip/${email}`);
     result = await result.json();
     console.log("my trip", result);
     setUserTrip(result);
