@@ -22,8 +22,8 @@ const Login = () => {
       return false;
     }
 
-    // let result = await fetch("http://localhost:5000/login", {
-      let result = await fetch("https://trip-planner-ai-back-end.vercel.app/login", {
+    // let result = await fetch("https://trip-planner-ai-back-end.vercel.app/login", {
+    let result = await fetch("http://localhost:5000/login", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {

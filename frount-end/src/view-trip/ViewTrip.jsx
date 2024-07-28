@@ -14,8 +14,8 @@ const ViewTrip = () => {
   // console.log("params", params);
   const navigate = useNavigate();
   const getTripData = async () => {
-    // let result = await fetch(`http://localhost:5000/view-trip/${tripID}`);
-    let result = await fetch(`https://trip-planner-ai-back-end.vercel.app/view-trip/${tripID}`);
+    // let result = await fetch(`https://trip-planner-ai-back-end.vercel.app/view-trip/${tripID}`);
+    let result = await fetch(`http://localhost:5000/view-trip/${tripID}`);
     result = await result.json();
     if (result.result) {
       navigate("/create-trip");

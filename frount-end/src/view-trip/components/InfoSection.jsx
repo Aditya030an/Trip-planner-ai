@@ -64,7 +64,7 @@ function InfoSection({ trip }) {
   return (
     <div className="">
       <img
-        src={photoUrl}
+        src={photoUrl ? photoUrl : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdqpwJHiXNZtY_eBRu7RGl78Vv5nE4aFHatg&s"}
         alt="trip-image"
         className="w-full h-[340px] object-cover rounded-lg"
       />

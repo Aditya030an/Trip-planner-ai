@@ -22,11 +22,11 @@ const UserTripCardItem = ({ trip }) => {
         if (response.data.results.length > 0) {
           setPhotoUrl(response.data.results[0].urls.regular);
         } else {
-          setPhotoUrl("https://via.placeholder.com/150");
+          setPhotoUrl("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdqpwJHiXNZtY_eBRu7RGl78Vv5nE4aFHatg&s");
         }
       } catch (error) {
         console.log("Error Fetching photo", error);
-        setPhotoUrl("https://via.placeholder.com/150");
+        setPhotoUrl("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdqpwJHiXNZtY_eBRu7RGl78Vv5nE4aFHatg&s");
       }
     };
 
