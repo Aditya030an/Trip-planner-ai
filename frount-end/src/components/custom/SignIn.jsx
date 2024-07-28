@@ -23,6 +23,7 @@ const SignIn = () => {
   }, []);
 
   const checkUser =async (key)=>{
+    // let result = await fetch(`http://localhost:5000/register/${key}`);
     let result = await fetch(`https://trip-planner-ai-back-end.vercel.app/register/${key}`);
     result = await result.json();
     if(result.length > 0){
@@ -46,7 +47,8 @@ const SignIn = () => {
       toast("This email id is already exist");
       return false;
     }
-    let result = await fetch("http://localhost:5000/register", {
+    // let result = await fetch("http://localhost:5000/register", {
+    let result = await fetch("https://trip-planner-ai-back-end.vercel.app/register", {
       method: "post",
       body: JSON.stringify({ name, email, password }),
       headers: {
