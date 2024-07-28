@@ -65,4 +65,9 @@ app.get("/my-trip/:key", async (req, res) => {
   res.send(result);
 });
 
-app.listen("https://trip-planner-ai-back-end.vercel.app/"||5000);
+// app.listen("https://trip-planner-ai-back-end.vercel.app/"||5000);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
