@@ -4,6 +4,16 @@ require("./db/config");
 const User = require("./db/User");
 const TripData = require("./db/TripData");
 const app = express();
+require('dotenv').config();
+
+const mongoURI = process.env.MONGODB_URI;
+
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("Connected to MongoDB"))
+.catch((err) => console.error("Failed to connect to MongoDB", err));
 
 app.use(express.json());
 app.use(cors());
